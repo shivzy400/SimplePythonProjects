@@ -100,6 +100,12 @@ def tic_tac_toe(characters) :
         else :
             turn = 0    
 
+#display score
+def display_score() :
+    global p1_score
+    global p2_score
+    print(f'Player 1 : {p1_score}\nPlayer 2 : {p2_score}')
+
 
 # Driver's Code 
 if __name__ == '__main__' :
@@ -112,3 +118,5 @@ if __name__ == '__main__' :
 
     # actual game logic
     tic_tac_toe(characters)
+
+    display_score()
