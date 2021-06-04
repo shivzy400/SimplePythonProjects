@@ -4,22 +4,13 @@ from GameFunctions import *
 
 def play_turn(buttons , num) :
     global positions
-    global current_player
     place_character(buttons[num] , num)
 
     if is_win(buttons) :
-        print('current ==' , current_player)
-        messagebox.showinfo("Game Over",f"Player '{current_player}' Wins")
+        messagebox.showinfo("Game Over","Player Wins")
         reset_game(buttons)
-    
-    else :
-        print('current ==' , current_player)
-        if current_player == 'X' :
-            current_player = 'O'
-        else :
-            current_player = 'X'
-    
-    if is_draw() :
+
+    elif is_draw() :
         messagebox.showinfo("Game Over","Draw")
         reset_game(buttons)
 

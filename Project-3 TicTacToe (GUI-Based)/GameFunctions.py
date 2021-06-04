@@ -1,8 +1,4 @@
-from tkinter import *
-from tkinter import messagebox
-
 current_character = 'X'
-current_player = 'X'
 positions = [''] * 10
 positions[0] = '#' # no use
 
@@ -10,14 +6,13 @@ def reset_game(buttons) :
     global positions
     global current_character
     global current_player
-    
+
     for i in range(1 , len(buttons) + 1) :
         buttons[i]['bg'] = '#f1f2f6'
         buttons[i]['text'] = ''
     positions = [''] * 10
     positions[0] = '#'
     current_character = 'X'
-    current_player = 'X'
 
 def is_win(buttons) :
     global positions
