@@ -10,7 +10,7 @@ def play_turn(buttons , num) :
         messagebox.showinfo("Game Over","Player Wins")
         reset_game(buttons)
 
-    elif is_draw() :
+    elif is_draw(buttons) :
         messagebox.showinfo("Game Over","Draw")
         reset_game(buttons)
 

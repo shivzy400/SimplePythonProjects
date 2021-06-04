@@ -85,13 +85,15 @@ def is_win(buttons) :
         return False
 
 
-def is_draw() :
+def is_draw(buttons) :
     global positions
     count = 0
     for pos in positions :
         if pos != '' :
             count = count + 1
     if count == len(positions) :
+        for i in range(1 , 10) :
+            buttons[i]['bg'] = 'orange'
         return True
     return False
 
