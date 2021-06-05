@@ -1,5 +1,5 @@
 from tkinter import *
-from gui import *
+from GameUI import *
 
 if __name__ == '__main__' :
 

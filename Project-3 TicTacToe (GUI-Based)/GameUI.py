@@ -37,7 +37,7 @@ def game_window(root) :
         i : Button(
             game , 
             font = ('consolas' , 24) , 
-            relief=GROOVE , 
+            relief=RIDGE , 
             width=7 , 
             height=3 , 
             bg = '#f1f2f6' ,
@@ -45,12 +45,12 @@ def game_window(root) :
         ) for i in range(1,10) 
     }
 
-    buttons[7].grid(row=1 , column=0 , padx=2 , pady=2)
-    buttons[8].grid(row=1 , column=1 , padx=2 , pady=2)
-    buttons[9].grid(row=1 , column=2 , padx=2 , pady=2)
-    buttons[4].grid(row=2 , column=0 , padx=2 , pady=2)
-    buttons[5].grid(row=2 , column=1 , padx=2 , pady=2)
-    buttons[6].grid(row=2 , column=2 , padx=2 , pady=2)
-    buttons[1].grid(row=3 , column=0 , padx=2 , pady=2)
-    buttons[2].grid(row=3 , column=1 , padx=2 , pady=2)
-    buttons[3].grid(row=3 , column=2 , padx=2 , pady=2)
+    buttons[7].grid(row=1 , column=0 , padx=1 , pady=1)
+    buttons[8].grid(row=1 , column=1 , padx=1 , pady=1)
+    buttons[9].grid(row=1 , column=2 , padx=1 , pady=1)
+    buttons[4].grid(row=2 , column=0 , padx=1 , pady=1)
+    buttons[5].grid(row=2 , column=1 , padx=1 , pady=1)
+    buttons[6].grid(row=2 , column=2 , padx=1 , pady=1)
+    buttons[1].grid(row=3 , column=0 , padx=1 , pady=1)
+    buttons[2].grid(row=3 , column=1 , padx=1 , pady=1)
+    buttons[3].grid(row=3 , column=2 , padx=1 , pady=1)
