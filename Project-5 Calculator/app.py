@@ -30,7 +30,7 @@ class Calculator :
                 width = 5 , 
                 height = 2 ,
                 font = ('consolas' , 18),
-                relief='ridge',
+                relief='flat',
                 bg = 'white',
                 command = lambda i = num: self.btn_click(str(i))
             ) for num in range(0,10)
@@ -43,7 +43,7 @@ class Calculator :
                 height = 2 ,
                 font = ('consolas' , 18),
                 bg = '#bdc3c7',
-                relief='ridge' ,
+                relief='flat' ,
                 command = lambda i = operator: self.btn_click(i)
             ) for operator in ['+' , '-' , '*' , '/' , '%' , '.']
         }
@@ -55,7 +55,7 @@ class Calculator :
                 height = 2 ,
                 font = ('consolas' , 18),
                 bg = '#bdc3c7',
-                relief='ridge' ,
+                relief='flat' ,
                 command = lambda i = key: self.clear_or_backspace(i)
             ) for key in ['C' , '<']
         }
@@ -65,7 +65,7 @@ class Calculator :
             width = 5,
             height = 5 ,
             font = ('consolas' , 18) ,
-            relief='ridge',
+            relief='flat',
             bg='orange',
             command = lambda : self.equal_to()
         )}
@@ -104,7 +104,7 @@ class Calculator :
     def btn_click(self , ch) : 
         if is_operator(ch) :
             Calculator.actual_eq += ch
-            Calculator.oper_eq = ch
+            Calculator.oper_eq = Calculator.display_eq + ch
             Calculator.display_eq = ''
 
         else :
@@ -128,8 +128,8 @@ class Calculator :
                 Calculator.display_eq = '0'
             else :
                 Calculator.actual_eq = Calculator.actual_eq[:-1]
-            Calculator.display_str.set(Calculator.display_eq)
-            Calculator.operator_str.set(Calculator.oper_eq)
+        Calculator.display_str.set(Calculator.display_eq)
+        Calculator.operator_str.set(Calculator.oper_eq)
     
     def equal_to(self) :
         
